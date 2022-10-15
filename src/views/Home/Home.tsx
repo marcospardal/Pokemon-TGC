@@ -1,20 +1,23 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { PokemonGrid } from '../../components';
+import { api } from '../../resources/api';
+import Pokemon from '../../types/pokemon';
 
 import './Home.styles.sass';
 
 const Home = (): JSX.Element => {
+  const [pokemons, setPokemons] = useState<Pokemon[]>([])
+
+  useEffect(() => {
+    api.get('/cards').then(res => {
+      setPokemons(res.data.data);
+    })
+  }, [])
+
+  console.log(pokemons)
   return (
     <section id='home' className='home'>
-      <PokemonGrid list={[
-        { pokemonName: 'Venusaur-EX', pokemonId: 'g1-1', pokemonImg: 'https://images.pokemontcg.io/g1/1_hires.png' },
-        { pokemonName: 'Venusaur-EX', pokemonId: 'g1-1', pokemonImg: 'https://images.pokemontcg.io/g1/1_hires.png' },
-        { pokemonName: 'Venusaur-EX', pokemonId: 'g1-1', pokemonImg: 'https://images.pokemontcg.io/g1/1_hires.png' },
-        { pokemonName: 'Venusaur-EX', pokemonId: 'g1-1', pokemonImg: 'https://images.pokemontcg.io/g1/1_hires.png' },
-        { pokemonName: 'Venusaur-EX', pokemonId: 'g1-1', pokemonImg: 'https://images.pokemontcg.io/g1/1_hires.png' },
-        { pokemonName: 'Venusaur-EX', pokemonId: 'g1-1', pokemonImg: 'https://images.pokemontcg.io/g1/1_hires.png' },
-        { pokemonName: 'Venusaur-EX', pokemonId: 'g1-1', pokemonImg: 'https://images.pokemontcg.io/g1/1_hires.png' },
-      ]}/>
+      <PokemonGrid list={pokemons}/>
     </section>
   )
 }

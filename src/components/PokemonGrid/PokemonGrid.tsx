@@ -14,7 +14,7 @@ const PokemonGrid = (props: PokemonGridProps): JSX.Element => {
       <h2>All</h2>
       <section className='grid'>
         {list.map(pokemon => (
-          <PokemonCard pokemonId={pokemon.pokemonId} pokemonImg={pokemon.pokemonImg} pokemonName={pokemon.pokemonName} />
+          <PokemonCard pokemon={pokemon} />
         ))}
       </section>
     </section>

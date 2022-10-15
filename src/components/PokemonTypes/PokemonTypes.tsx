@@ -21,17 +21,17 @@ interface PokemonTypesProps {
 
 const PokemonTypes = (props: PokemonTypesProps): JSX.Element => {
   const { name, types } = props;
-  const grassIcon = useMemo(() => <img alt='grass-icon' src={GrassIcon}/>, [])
-  const dragonIcon = useMemo(() => <img alt='dragon-icon' src={DragonIcon}/>, [])
-  const fireIcon = useMemo(() => <img alt='fire-icon' src={FireIcon}/>, [])
-  const fairyIcon = useMemo(() => <img alt='fairy-icon' src={FairyIcon}/>, [])
-  const metalIcon = useMemo(() => <img alt='metal-icon' src={MetalIcon}/>, [])
-  const waterIcon = useMemo(() => <img alt='water-icon' src={WaterIcon}/>, [])
-  const psychicIcon = useMemo(() => <img alt='psychic-icon' src={PsychicIcon}/>, [])
-  const darknessIcon = useMemo(() => <img alt='darkness-icon' src={DarkenessIcon}/>, [])
-  const lightningIcon = useMemo(() => <img alt='lightning-icon' src={LightningIcon}/>, [])
-  const fightningIcon = useMemo(() => <img alt='fightning-icon' src={FightningIcon}/>, [])
-  const colorlessIcon = useMemo(() => <img alt='colorless-icon' src={ColorlessIcon}/>, [])
+  const grassIcon = useMemo(() => <img alt='grass-icon' src={GrassIcon}/>, []);
+  const dragonIcon = useMemo(() => <img alt='dragon-icon' src={DragonIcon}/>, []);
+  const fireIcon = useMemo(() => <img alt='fire-icon' src={FireIcon}/>, []);
+  const fairyIcon = useMemo(() => <img alt='fairy-icon' src={FairyIcon}/>, []);
+  const metalIcon = useMemo(() => <img alt='metal-icon' src={MetalIcon}/>, []);
+  const waterIcon = useMemo(() => <img alt='water-icon' src={WaterIcon}/>, []);
+  const psychicIcon = useMemo(() => <img alt='psychic-icon' src={PsychicIcon}/>, []);
+  const darknessIcon = useMemo(() => <img alt='darkness-icon' src={DarkenessIcon}/>, []);
+  const lightningIcon = useMemo(() => <img alt='lightning-icon' src={LightningIcon}/>, []);
+  const fightningIcon = useMemo(() => <img alt='fightning-icon' src={FightningIcon}/>, []);
+  const colorlessIcon = useMemo(() => <img alt='colorless-icon' src={ColorlessIcon}/>, []);
 
   return (
     <section id={`${name}-types`} className='pokemon-types'>
@@ -50,4 +50,4 @@ const PokemonTypes = (props: PokemonTypesProps): JSX.Element => {
   )
 }
 
-export default memo(PokemonTypes)
+export default memo(PokemonTypes);
