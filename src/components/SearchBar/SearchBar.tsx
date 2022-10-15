@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import './SearchBar.styles.sass';
 
 const SearchBar = (): JSX.Element => {
@@ -13,4 +13,4 @@ const SearchBar = (): JSX.Element => {
   )
 }
 
-export default SearchBar;
+export default memo(SearchBar);

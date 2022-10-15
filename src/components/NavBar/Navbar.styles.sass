@@ -2,10 +2,24 @@ nav
   display: flex
   justify-content: space-between
   max-height: 80px
-  padding: 10px 15px
   align-items: center
-  width: 100vw
+  width: 100%
+  margin: 10px
 
-img
+.icon
   height: 60px
   width: 60px
+  cursor: pointer
+  margin: 0 10px
+  transition: all .2s ease-in-out
+
+  @media screen and (max-width: 600px) 
+    transform: scale(0.5)
+
+.search-icon 
+  height: 20px
+  cursor: pointer
+  margin: 0 20px
+
+.search-input
+  width: 80%
